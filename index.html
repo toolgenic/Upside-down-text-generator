@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Upside-Down Text Generator</title>
+  <style>
+    :root {
+      --bg: #121212;
+      --text: #ffffff;
+      --primary: #00bfff;
+      --card: #1e1e1e;
+      --border: #333;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+      color: #ccc;
+    }
+
+    .container {
+      background-color: var(--card);
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.4);
+      max-width: 600px;
+      width: 100%;
+      border: 1px solid var(--border);
+      transition: transform 0.4s ease-in-out;
+    }
+
+    textarea, input {
+      width: 100%;
+      margin: 10px 0;
+      padding: 12px;
+      font-size: 1rem;
+      border: 1px solid #444;
+      background-color: #222;
+      color: white;
+      border-radius: 8px;
+      outline: none;
+      resize: vertical;
+    }
+
+    input[readonly] {
+      cursor: pointer;
+    }
+
+    button {
+      background: var(--primary);
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background: #0095cc;
+    }
+
+    #copyMsg {
+      margin-top: 10px;
+      color: #66ff99;
+      font-weight: bold;
+    }
+
+    .animate {
+      animation: pulse 0.4s ease-in-out;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.04); }
+      100% { transform: scale(1); }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🔄 Upside-Down Text Generator</h1>
+  <p>Flip your text upside down for fun captions and memes!</p>
+
+  <div class="container" id="cardBox">
+    <textarea id="inputText" rows="4" placeholder="Type something here..."></textarea>
+    <button onclick="flipText()">Flip Text</button>
+    <input type="text" id="outputText" readonly onclick="copyText()" placeholder="Upside-down text will appear here" />
+    <p id="copyMsg"></p>
+  </div>
+
+  <script>
+    const flipMap = {
+      a: 'ɐ', b: 'q', c: 'ɔ', d: 'p', e: 'ǝ', f: 'ɟ',
+      g: 'ƃ', h: 'ɥ', i: 'ᴉ', j: 'ɾ', k: 'ʞ', l: 'ʃ',
+      m: 'ɯ', n: 'u', o: 'o', p: 'd', q: 'b', r: 'ɹ',
+      s: 's', t: 'ʇ', u: 'n', v: 'ʌ', w: 'ʍ', x: 'x',
+      y: 'ʎ', z: 'z',
+      A: '∀', B: '𐐒', C: 'Ɔ', D: '◖', E: 'Ǝ', F: 'Ⅎ',
+      G: 'פ', H: 'H', I: 'I', J: 'ſ', K: '⋊', L: '˥',
+      M: 'W', N: 'N', O: 'O', P: 'Ԁ', Q: 'Ό', R: 'ᴚ',
+      S: 'S', T: '┴', U: '∩', V: 'Λ', W: 'M', X: 'X',
+      Y: '⅄', Z: 'Z',
+      '1': 'Ɩ', '2': 'ᄅ', '3': 'Ɛ', '4': 'ㄣ', '5': 'ϛ',
+      '6': '9', '7': 'ㄥ', '8': '8', '9': '6', '0': '0',
+      '.': '˙', ',': "'", "'": ',', '"': ',,', '?': '¿',
+      '!': '¡', '[': ']', ']': '[', '(': ')', ')': '(',
+      '{': '}', '}': '{', '<': '>', '>': '<', '_': '‾',
+      '&': '⅋', '^': 'v', '`': ','
+    };
+
+    function flipText() {
+      const input = document.getElementById("inputText").value;
+      const flipped = input.split("")
+        .reverse()
+        .map(c => flipMap[c] || flipMap[c.toLowerCase()] || c)
+        .join('');
+      document.getElementById("outputText").value = flipped;
+      document.getElementById("copyMsg").innerText = '';
+      document.getElementById("cardBox").classList.add("animate");
+      setTimeout(() => {
+        document.getElementById("cardBox").classList.remove("animate");
+      }, 400);
+    }
+
+    function copyText() {
+      const output = document.getElementById("outputText");
+      output.select();
+      output.setSelectionRange(0, 99999);
+      document.execCommand("copy");
+      document.getElementById("copyMsg").innerText = "✅ Copied to clipboard!";
+    }
+  </script>
+
+</body>
+</html>
