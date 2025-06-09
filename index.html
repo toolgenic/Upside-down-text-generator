@@ -1,153 +1,116 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Upside-Down Text Generator</title>
-  <style>
-    :root {
-      --bg: #121212;
-      --text: #ffffff;
-      --primary: #00bfff;
-      --card: #1e1e1e;
-      --border: #333;
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#121212">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="English">
+  <meta name="revisit-after" content="3 days">
+  <meta name="distribution" content="global">
+  <meta name="rating" content="general">
+  <meta name="target" content="all">  <!-- SEO Meta -->  <title>Upside-Down Text Generator - Flip Text for Memes, Captions & Fun</title>
+  <meta name="title" content="Upside-Down Text Generator - Flip Text Tool Online">
+  <meta name="description" content="Flip text upside down for captions, memes, and bios with our fast, mobile-friendly Upside-Down Text Generator. Free tool with animations and dark mode.">
+  <meta name="keywords" content="Upside Down Text, Flip Text, Reverse Text, Inverted Text Generator, Meme Text Flipper, Backwards Text Tool, Upside Down Writing">
+  <meta name="author" content="Your Name">  <!-- Open Graph Meta -->  <meta property="og:title" content="Upside-Down Text Generator - Flip Your Text Online">
+  <meta property="og:description" content="Flip text for fun bios, posts, memes, and more. Works on mobile, supports dark mode and animations.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://yourusername.github.io/upside-down-text-generator/">
+  <meta property="og:image" content="https://yourusername.github.io/upside-down-text-generator/preview.png">  <!-- Twitter Meta -->  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Upside-Down Text Generator - Flip Your Text Now">
+  <meta name="twitter:description" content="Fast, simple, and free text flipper for social media bios and memes.">
+  <meta name="twitter:image" content="https://yourusername.github.io/upside-down-text-generator/preview.png">  <!-- Canonical Link -->  <link rel="canonical" href="https://yourusername.github.io/upside-down-text-generator/">  <!-- Favicon -->  <link rel="icon" href="favicon.png" type="image/png">  <!-- Structured Data -->  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Upside-Down Text Generator",
+    "url": "https://yourusername.github.io/upside-down-text-generator/",
+    "applicationCategory": "Utility",
+    "operatingSystem": "All",
+    "description": "Online Upside-Down Text Generator for fun and creativity. Flip your words for memes and captions.",
+    "author": {
+      "@type": "Person",
+      "name": "Your Name"
     }
-
+  }
+  </script>  <!-- Styles -->  <style>
     body {
-      background-color: var(--bg);
-      color: var(--text);
-      font-family: 'Segoe UI', sans-serif;
+      background-color: #121212;
+      color: #fff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 2rem;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+      padding: 20px;
+      transition: background-color 0.5s ease;
     }
-
     h1 {
       font-size: 2.5rem;
       margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
     }
-
-    p {
-      margin-bottom: 1rem;
-      font-size: 1.1rem;
-      color: #ccc;
-    }
-
-    .container {
-      background-color: var(--card);
-      padding: 2rem;
-      border-radius: 12px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.4);
-      max-width: 600px;
+    textarea, .output {
       width: 100%;
-      border: 1px solid var(--border);
-      transition: transform 0.4s ease-in-out;
-    }
-
-    textarea, input {
-      width: 100%;
+      max-width: 500px;
+      padding: 10px;
       margin: 10px 0;
-      padding: 12px;
-      font-size: 1rem;
-      border: 1px solid #444;
-      background-color: #222;
-      color: white;
-      border-radius: 8px;
-      outline: none;
-      resize: vertical;
-    }
-
-    input[readonly] {
-      cursor: pointer;
-    }
-
-    button {
-      background: var(--primary);
-      color: white;
-      padding: 10px 20px;
       border: none;
       border-radius: 8px;
+      font-size: 1.1rem;
+      background-color: #1e1e1e;
+      color: #fff;
+    }
+    button {
+      padding: 10px 20px;
       font-size: 1rem;
+      border: none;
+      background-color: #00bfff;
+      color: #000;
       cursor: pointer;
-      transition: background 0.3s;
+      border-radius: 8px;
+      transition: transform 0.3s ease;
     }
-
     button:hover {
-      background: #0095cc;
+      transform: scale(1.05);
     }
-
-    #copyMsg {
-      margin-top: 10px;
-      color: #66ff99;
-      font-weight: bold;
+    .emoji {
+      font-size: 2rem;
+      margin-right: 10px;
     }
-
-    .animate {
-      animation: pulse 0.4s ease-in-out;
-    }
-
-    @keyframes pulse {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.04); }
-      100% { transform: scale(1); }
-    }
-  </style>
-</head>
+  </style></head>
 <body>
-
-  <h1>🔄 Upside-Down Text Generator</h1>
+  <h1><span class="emoji">🔁</span>Upside-Down Text Generator</h1>
   <p>Flip your text upside down for fun captions and memes!</p>
-
-  <div class="container" id="cardBox">
-    <textarea id="inputText" rows="4" placeholder="Type something here..."></textarea>
-    <button onclick="flipText()">Flip Text</button>
-    <input type="text" id="outputText" readonly onclick="copyText()" placeholder="Upside-down text will appear here" />
-    <p id="copyMsg"></p>
-  </div>
-
-  <script>
-    const flipMap = {
+  <textarea id="inputText" rows="3" placeholder="Type text here..."></textarea>
+  <button onclick="flipText()">Flip Text</button>
+  <textarea class="output" id="outputText" rows="3" readonly></textarea>  <script>
+    const charMap = {
       a: 'ɐ', b: 'q', c: 'ɔ', d: 'p', e: 'ǝ', f: 'ɟ',
-      g: 'ƃ', h: 'ɥ', i: 'ᴉ', j: 'ɾ', k: 'ʞ', l: 'ʃ',
-      m: 'ɯ', n: 'u', o: 'o', p: 'd', q: 'b', r: 'ɹ',
-      s: 's', t: 'ʇ', u: 'n', v: 'ʌ', w: 'ʍ', x: 'x',
-      y: 'ʎ', z: 'z',
-      A: '∀', B: '𐐒', C: 'Ɔ', D: '◖', E: 'Ǝ', F: 'Ⅎ',
-      G: 'פ', H: 'H', I: 'I', J: 'ſ', K: '⋊', L: '˥',
-      M: 'W', N: 'N', O: 'O', P: 'Ԁ', Q: 'Ό', R: 'ᴚ',
-      S: 'S', T: '┴', U: '∩', V: 'Λ', W: 'M', X: 'X',
-      Y: '⅄', Z: 'Z',
-      '1': 'Ɩ', '2': 'ᄅ', '3': 'Ɛ', '4': 'ㄣ', '5': 'ϛ',
-      '6': '9', '7': 'ㄥ', '8': '8', '9': '6', '0': '0',
-      '.': '˙', ',': "'", "'": ',', '"': ',,', '?': '¿',
-      '!': '¡', '[': ']', ']': '[', '(': ')', ')': '(',
-      '{': '}', '}': '{', '<': '>', '>': '<', '_': '‾',
-      '&': '⅋', '^': 'v', '`': ','
+      g: 'ƃ', h: 'ɥ', i: 'ı', j: 'ɾ', k: 'ʞ', l: 'l',
+      m: 'ɯ', n: 'u', o: 'o', p: 'd', q: 'b', r: 'ɹ', s: 's', t: 'ʇ',
+      u: 'n', v: 'ʌ', w: 'ʍ', x: 'x', y: 'ʎ', z: 'z',
+      A: '∀', B: 'ᗺ', C: 'Ɔ', D: 'ᗡ', E: 'Ǝ', F: 'Ⅎ', G: 'פ',
+      H: 'H', I: 'I', J: 'ſ', K: 'K', L: '⅂', M: 'W', N: 'N', O: 'O',
+      P: 'Ԁ', Q: 'Q', R: 'ᴚ', S: 'S', T: '⊥', U: '∩', V: 'Λ',
+      W: 'M', X: 'X', Y: '⅄', Z: 'Z',
+      '.': '˙', ',': ''', ''': ',', '"': ',', '_': '‾',
+      '?': '¿', '!': '¡', '[': ']', ']': '[', '(': ')', ')': '(',
+      '{': '}', '}': '{', '<': '>', '>': '<'
     };
 
     function flipText() {
       const input = document.getElementById("inputText").value;
-      const flipped = input.split("")
-        .reverse()
-        .map(c => flipMap[c] || flipMap[c.toLowerCase()] || c)
-        .join('');
+      let flipped = "";
+      for (let i = input.length - 1; i >= 0; i--) {
+        const char = input.charAt(i);
+        flipped += charMap[char] || charMap[char.toLowerCase()] || char;
+      }
       document.getElementById("outputText").value = flipped;
-      document.getElementById("copyMsg").innerText = '';
-      document.getElementById("cardBox").classList.add("animate");
-      setTimeout(() => {
-        document.getElementById("cardBox").classList.remove("animate");
-      }, 400);
     }
-
-    function copyText() {
-      const output = document.getElementById("outputText");
-      output.select();
-      output.setSelectionRange(0, 99999);
-      document.execCommand("copy");
-      document.getElementById("copyMsg").innerText = "✅ Copied to clipboard!";
-    }
-  </script>
-
-</body>
+  </script></body>
 </html>
