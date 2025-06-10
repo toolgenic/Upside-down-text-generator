@@ -1,7 +1,7 @@
 {
   "name": "Upside-Down Text Generator",
   "short_name": "TextFlipper",
-  "start_url": "/Upside-down-text-generator-/",
+  "start_url": "/Upside-down-text-generator/",
   "display": "standalone",
   "background_color": "#121212",
   "theme_color": "#00bfff",
