@@ -5,7 +5,6 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Basic SEO -->
   <title>Upside-Down Text Generator - Flip Text for Memes, Captions & Fun</title>
   <meta name="description" content="Flip text upside down for captions, memes, and bios with ToolGenic's fast, mobile-friendly Upside-Down Text Generator." />
   <meta name="keywords" content="Upside Down Text, Flip Text, Reverse Text, Inverted Text Generator, Meme Text Flipper, Backwards Text Tool" />
@@ -17,32 +16,32 @@
   <meta name="rating" content="general" />
   <meta name="theme-color" content="#121212" />
 
-  <!-- Open Graph (Facebook, etc.) -->
+  <!-- Open Graph -->
   <meta property="og:title" content="Upside-Down Text Generator - Flip Your Text Online" />
   <meta property="og:description" content="Flip text for fun bios, posts, memes, and more. Works on mobile, supports dark mode and animations." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://toolgenic.github.io/Upside-down-text-generator-/" />
-  <meta property="og:image" content="https://toolgenic.github.io/Upside-down-text-generator-/preview.png" />
+  <meta property="og:url" content="https://toolgenic.github.io/Upside-down-text-generator/" />
+  <meta property="og:image" content="https://toolgenic.github.io/Upside-down-text-generator/preview.png" />
 
   <!-- Twitter Meta -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Upside-Down Text Generator - Flip Your Text Now" />
   <meta name="twitter:description" content="Fast, simple, and free text flipper for social media bios and memes." />
-  <meta name="twitter:image" content="https://toolgenic.github.io/Upside-down-text-generator-/preview.png" />
+  <meta name="twitter:image" content="https://toolgenic.github.io/Upside-down-text-generator/preview.png" />
 
   <!-- Canonical -->
-  <link rel="canonical" href="https://toolgenic.github.io/Upside-down-text-generator-/" />
+  <link rel="canonical" href="https://toolgenic.github.io/Upside-down-text-generator/" />
 
   <!-- Favicon -->
   <link rel="icon" href="favicon.png" type="image/png" />
 
-  <!-- Structured Data (JSON-LD) -->
+  <!-- Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "WebApplication",
     "name": "Upside-Down Text Generator",
-    "url": "https://toolgenic.github.io/Upside-down-text-generator-/",
+    "url": "https://toolgenic.github.io/Upside-down-text-generator/",
     "applicationCategory": "Utility",
     "operatingSystem": "All",
     "description": "Convert normal text into upside down format instantly using ToolGenic's free online tool.",
@@ -114,41 +113,41 @@
 </head>
 
 <body>
-  <h1><span class="emoji">🔁</span>Upside-Down Text Generator</h1>
-  <p>Flip your text upside down for fun captions and memes!</p>
-
-  <textarea id="inputText" rows="3" placeholder="Type text here..."></textarea>
+  <h1><span class="emoji">🔄</span>Upside-Down Text Generator</h1>
+  <textarea id="inputText" rows="4" placeholder="Type your text here..."></textarea>
   <button onclick="flipText()">Flip Text</button>
-  <textarea class="output" id="outputText" rows="3" readonly></textarea>
+  <textarea class="output" id="outputText" rows="4" readonly placeholder="Upside-down text appears here..."></textarea>
+
+  <footer>
+    <p>Made with ❤️ by <a href="https://github.com/ToolGenic" target="_blank">ToolGenic</a></p>
+    <p><a href="sitemap.html">Sitemap</a></p>
+  </footer>
 
   <script>
-    const charMap = {
-      a: 'ɐ', b: 'q', c: 'ɔ', d: 'p', e: 'ǝ', f: 'ɟ',
-      g: 'ƃ', h: 'ɥ', i: 'ı', j: 'ɾ', k: 'ʞ', l: 'l',
-      m: 'ɯ', n: 'u', o: 'o', p: 'd', q: 'b', r: 'ɹ', s: 's', t: 'ʇ',
-      u: 'n', v: 'ʌ', w: 'ʍ', x: 'x', y: 'ʎ', z: 'z',
-      A: '∀', B: 'ᗺ', C: 'Ɔ', D: 'ᗡ', E: 'Ǝ', F: 'Ⅎ', G: 'פ',
-      H: 'H', I: 'I', J: 'ſ', K: 'K', L: '⅂', M: 'W', N: 'N', O: 'O',
-      P: 'Ԁ', Q: 'Q', R: 'ᴚ', S: 'S', T: '⊥', U: '∩', V: 'Λ',
-      W: 'M', X: 'X', Y: '⅄', Z: 'Z',
-      '.': '˙', ',': '\'', '\'': ',', '"': ',', '_': '‾',
-      '?': '¿', '!': '¡', '[': ']', ']': '[', '(': ')', ')': '(',
-      '{': '}', '}': '{', '<': '>', '>': '<'
-    };
-
     function flipText() {
+      const charMap = {
+        a: "ɐ", b: "q", c: "ɔ", d: "p", e: "ǝ", f: "ɟ", g: "ƃ",
+        h: "ɥ", i: "ᴉ", j: "ɾ", k: "ʞ", l: "ʃ", m: "ɯ", n: "u",
+        o: "o", p: "d", q: "b", r: "ɹ", s: "s", t: "ʇ", u: "n",
+        v: "ʌ", w: "ʍ", x: "x", y: "ʎ", z: "z",
+        A: "∀", B: "𐐒", C: "Ɔ", D: "p", E: "Ǝ", F: "Ⅎ", G: "פ",
+        H: "H", I: "I", J: "ſ", K: "ʞ", L: "˥", M: "W", N: "N",
+        O: "O", P: "Ԁ", Q: "Q", R: "ᴚ", S: "S", T: "⊥", U: "∩",
+        V: "Λ", W: "M", X: "X", Y: "⅄", Z: "Z",
+        0: "0", 1: "Ɩ", 2: "ᄅ", 3: "Ɛ", 4: "ㄣ", 5: "ϛ", 6: "9",
+        7: "ㄥ", 8: "8", 9: "6",
+        ".": "˙", ",": "'", "'": ",", '"': ",,", "!": "¡",
+        "?": "¿", "(": ")", ")": "(", "[": "]", "]": "[", "{": "}",
+        "}": "{", "<": ">", ">": "<", "&": "⅋", "_": "‾"
+      };
       const input = document.getElementById("inputText").value;
       let flipped = "";
       for (let i = input.length - 1; i >= 0; i--) {
-        const char = input.charAt(i);
+        const char = input[i];
         flipped += charMap[char] || charMap[char.toLowerCase()] || char;
       }
       document.getElementById("outputText").value = flipped;
     }
   </script>
-
-  <footer>
-    <a href="/sitemap.html">Sitemap</a>
-  </footer>
 </body>
 </html>
