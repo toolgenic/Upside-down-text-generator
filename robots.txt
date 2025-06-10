@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://toolgenic.github.io/Upside-down-text-generator-/sitemap.xml
+Sitemap: https://toolgenic.github.io/Upside-down-text-generator/sitemap.xml
