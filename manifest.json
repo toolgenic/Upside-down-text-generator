@@ -1,0 +1,21 @@
+{
+  "name": "Upside-Down Text Generator",
+  "short_name": "TextFlipper",
+  "start_url": "/Upside-down-text-generator-/",
+  "display": "standalone",
+  "background_color": "#121212",
+  "theme_color": "#00bfff",
+  "description": "Flip your text upside down instantly with this fun and free text generator tool.",
+  "icons": [
+    {
+      "src": "favicon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "favicon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
